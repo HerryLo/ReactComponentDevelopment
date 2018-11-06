@@ -1,0 +1,7 @@
+img{
+    width: 100%;
+    height: 200px;
+}
+html ,body, div, ul, li, img, p, footer, section, article{
+    margin: 0px;
+}

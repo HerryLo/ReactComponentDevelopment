@@ -1,0 +1,65 @@
+<!-- js 原生图片懒加载 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lazyImg</title>
+    <style>
+        img{
+            height: 300px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="" id='img1'>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="" id='img2'>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="" id='img3'>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="" id='img4'>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="" id='img5'>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="" id='img6'>
+    </div>
+</body>
+<script>
+    // <!-- js 原生图片懒加载 -->
+    let img = document.querySelectorAll('img'); 
+    let newImg = new Image();
+    let imgState = true;
+    newImg.onload = () => {
+        console.log(img);
+    }
+    const arr = [
+        {src: 'http://thumb12.jfcdns.com/2018-08/29/bce5b866526230ae.png', container: null},
+        {src: 'https://goss1.vcg.com/creative/vcg/800/version23/VCG211c9338088.jpg', container: null},
+        {src: 'https://avatars3.githubusercontent.com/u/20215975?s=400&u=aa4f80e1f79020410e56ef05c689efa6a39b9023&v=4', container: null},
+        {src: 'http://thumb12.jfcdns.com/2018-08/29/bce5b866526230ae.png'},
+        {src: 'https://goss1.vcg.com/creative/vcg/800/version23/VCG211c9338088.jpg', container: null},
+        {src: 'https://avatars3.githubusercontent.com/u/20215975?s=400&u=aa4f80e1f79020410e56ef05c689efa6a39b9023&v=4', container: null}
+    ]
+    function lazyImg() {
+        let len = img.length;
+        let viewHeight = window.innerHeight;
+        let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if(imgState){
+            imgState = false;
+            for(let i=0;i<len;i++){
+                let imgTopHeight = img[i].getBoundingClientRect().top;
+                console.log(viewHeight + scrollTop, img[i].getBoundingClientRect());
+                if(viewHeight + scrollTop > imgTopHeight && !arr[i].container){
+                    console.log(img[i], '~~~~~~~~imgLazy');
+                    img[i].src =arr[i].src;
+                    !arr[i].container && (arr[i].container = img[i])
+                }
+            }
+            imgState = true;
+        }
+    }
+
+    window.onload = window.onscroll = () => {
+        lazyImg();
+    }
+</script>
+</html>
