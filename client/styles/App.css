@@ -5,3 +5,7 @@ img{
 html ,body, div, ul, li, img, p, footer, section, article{
     margin: 0px;
 }
+html, body{
+    height: 100%;
+    overflow: auto;
+}
