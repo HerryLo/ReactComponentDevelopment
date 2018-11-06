@@ -14,17 +14,9 @@ class App extends React.Component {
             viewHeight: null,
             elViewTop: null,
             proxyImg: new Image(),
-            onCallback: () => {
-                let context = this;
-                let args = arguments;
-                let fn = this.check;
-                let runCallback = function() {
-                    fn.apply(context, args);
-                };
-                setTimeout(()=> {
-                    runCallback();
-                }, 200)
-            }
+            onCallback: this.throttle(()=> {
+                this.check();
+            })
         }
     }
 
@@ -38,7 +30,7 @@ class App extends React.Component {
     }
 
     init() {
-        console.log('init', '~~~~初始化准备');
+        console.log(this.el);
         const el = this.el;
         let { onCallback } = this.currentImg;
         const viewHeight = window.innerHeight;
@@ -52,32 +44,32 @@ class App extends React.Component {
     }
 
     check() {
-        console.log(arguments)
+        // console.log(args)
     }
 
-    // throttle(fn, wait) {
-    //     let timeout = null;
-    //     let lastRun = 0;
-    //     return function() {
-    //         if (timeout) {
-    //             return;
-    //         }
-    //         let elapsed = Date.now() - lastRun;
-    //         let context = this;
-    //         let args = arguments;
-    //         console.log(arguments);
-    //         let runCallback = function() {
-    //             lastRun = Date.now();
-    //             timeout = false;
-    //             fn.apply(context, args);
-    //         };
-    //         if (elapsed >= wait) {
-    //             runCallback();
-    //         } else {
-    //             timeout = setTimeout(runCallback, wait);
-    //         }
-    //     }
-    // }
+    throttle(fn, wait) {
+        let timeout = null;
+        let lastRun = 0;
+        return function() {
+            if (timeout) {
+                return;
+            }
+            let elapsed = Date.now() - lastRun;
+            let context = this;
+            let args = arguments;
+            let runCallback = function() {
+                lastRun = Date.now();
+                timeout = false;
+                fn.apply(context, args);
+                console.log(fn);
+            };
+            if (elapsed >= wait) {
+                runCallback();
+            } else {
+                timeout = setTimeout(runCallback, wait);
+            }
+        }
+    }
 
     render() {
         const { defaultImg } = this.state;
