@@ -33,8 +33,7 @@ module.exports = {
                 use: ['style-loader', {
                     loader: 'css-loader',
                     options: {
-                        importLoader: 1,
-                        modules: true
+                        importLoader: 1
                     }
                 }],
                 exclude: /node_modules/,

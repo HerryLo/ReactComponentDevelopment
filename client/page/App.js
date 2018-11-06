@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/app'
+import ToastExample  from './Toast'
+import ModalExample  from './Modal'
 
 class App extends React.Component {
     constructor(props){
@@ -85,9 +87,16 @@ class App extends React.Component {
             // 通过ref回调函数获取 DOM元素实例
             ref: el => { this.el = el;return; }
         };
-        return React.createElement(
+        const imgEl = React.createElement(
             type,
             lazyImgProps
+        );
+        return (
+            <div>
+                {/* <ToastExample />
+                <ModalExample /> */}
+                {imgEl}
+            </div>
         )
     }
 }
