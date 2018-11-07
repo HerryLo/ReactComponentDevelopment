@@ -9,6 +9,9 @@
 ## install
 ```javascript
 $ npm install
+
+<!-- preview -->
+$ npm run dev
 ```
 
 ## 轻量级信息提示组件Toast
