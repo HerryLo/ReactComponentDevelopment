@@ -13,8 +13,10 @@ class LazyImg extends React.Component {
     }
 
     componentWillUnmount() {
+        let { onCallback } = this.currentImg;
+        window.removeEventListener('scroll', onCallback, false);
         this.el = null;
-        window.removeEventListener('scroll', );
+        this.currentImg = null;
     }
 
     shouldComponentUpdate(nextProps) {

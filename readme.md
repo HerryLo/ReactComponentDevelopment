@@ -6,6 +6,11 @@
 
 [LazyImg插件](#图片懒加载组件LazyImg)
 
+## install
+```javascript
+$ npm install
+```
+
 ## 轻量级信息提示组件Toast
 
     用于在不打断用户操作的情况下提供成功、警告、错误等反馈信息。
