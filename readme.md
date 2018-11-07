@@ -4,6 +4,8 @@
 
 [Modal插件](#全局对话框组件Modal)
 
+[LazyImg插件](#图片懒加载组件LazyImg)
+
 ## 轻量级信息提示组件Toast
 
     用于在不打断用户操作的情况下提供成功、警告、错误等反馈信息。
@@ -17,7 +19,7 @@
 在组件顶部引入Toast即可直接使用：
 
 ``` js
-import Toast from '../components/toast'
+import Toast from '../../components/toast'
 
 ...
 <button onClick={() => { Toast.info('普通提示') }}>普通提示</button>
@@ -89,7 +91,7 @@ Modal组件提供三个方法，分别为：
 ### 示例
 
 ``` js
-import Modal from '../components/modal'
+import Modal from '../../components/modal'
 
 ...
 const { alert, confirm, prompt } = Modal
@@ -121,3 +123,33 @@ prompt({
 ```
 
 依赖版本仅供参考。推荐 react、 react-dom 版本 16.0 以上，react-transition-group 版本 2.0 以上。
+
+## 图片懒加载组件LazyImg
+
+    用于图片的懒加载，避免一次加载全部图片，保证页面的流畅性
+
+### 效果预览
+
+
+### 如何使用
+
+在组件顶部引入LazyImg即可直接使用：
+
+``` js
+import LazyImg from '../../components/lazyImg'
+
+...
+<LazyImg 
+src='http://thumb12.jfcdns.com/2018-08/29/bce5b866526230ae.png' />
+...
+```
+
+### 组件依赖
+
+``` json
+{
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+}
+```
+依赖版本仅供参考，推荐 react、 react-dom 版本 16.0 以上
