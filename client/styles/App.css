@@ -7,5 +7,4 @@ html ,body, div, ul, li, img, p, footer, section, article{
 }
 html, body{
     height: 100%;
-    overflow: auto;
 }

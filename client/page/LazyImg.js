@@ -6,6 +6,9 @@ class LazyImgExample extends React.Component {
         super(props)
     }
 
+    componentDidMount() {
+    }
+
     render() {
         return (
             <div>
