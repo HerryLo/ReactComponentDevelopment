@@ -12,8 +12,12 @@ html, body{
 .div{
     width: 500px;
     margin: auto;
+    position: relative;
 }
 .flexDiv{
+    width: 500px;
+    position: fixed;
+    top: 0px;
     display: flex;
     justify-content: space-around;
     background: #ffff;
@@ -25,4 +29,11 @@ html, body{
 }
 .flexDiv .active{
     color: rgb(163, 46, 46);
+}
+button{
+    display: block;
+    margin: 50px auto 50px auto;
+}
+.content{
+    margin-top: 45px;
 }

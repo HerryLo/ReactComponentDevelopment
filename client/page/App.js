@@ -64,7 +64,9 @@ class App extends React.Component {
                     })
                 }
                 </div>
-                {this.NavTab()}
+                <div className="content">
+                    {this.NavTab()}
+                </div>
             </div>
         )
     }

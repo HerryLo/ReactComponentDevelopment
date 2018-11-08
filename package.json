@@ -24,7 +24,8 @@
     "webpack-dev-server": "^3.1.10"
   },
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --config ./config/webpack.config.js"
+    "dev": "webpack-dev-server --inline --hot --config ./config/webpack.config.js",
+    "build": "webpack --config ./config/webpack.config.pro.js --progress --colors -p --profile --display-modules"
   },
   "author": "",
   "license": "ISC"
