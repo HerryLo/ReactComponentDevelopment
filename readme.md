@@ -6,6 +6,8 @@
 
 [LazyImg插件](#图片懒加载组件LazyImg)
 
+    code在components目录下，欢迎查看👏👏！！
+
 ## install
 ```javascript
 $ npm install
@@ -20,7 +22,7 @@ $ npm run dev
 
 ### 效果预览
 
-- [点此预览](https://clancysong.github.io/react-components/dist/toast/)
+- [点此预览](http://www.didiheng.com/components/)
 
 ### 如何使用
 
@@ -80,7 +82,7 @@ Toast提供的函数调用后返回一个函数，调用这个函数可以立即
 
 ### 效果预览
 
-- [点此预览](https://clancysong.github.io/react-components/dist/modal/)
+- [点此预览](http://www.didiheng.com/components/)
 
 ### 如何使用
 
@@ -138,6 +140,7 @@ prompt({
 
 ### 效果预览
 
+[点击预览](http://www.didiheng.com/components/)
 
 ### 如何使用
 
