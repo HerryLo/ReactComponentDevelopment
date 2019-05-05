@@ -10,7 +10,7 @@ class Utils {
             let elapsed = Date.now() - lastRun;
             let context = this;
             let args = arguments;
-            console.log(arguments);
+            // console.log(arguments);
             let runCallback = function() {
                 lastRun = Date.now();
                 timeout = false;

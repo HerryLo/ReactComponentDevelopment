@@ -20,12 +20,12 @@ class LazyImg extends React.Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        console.log('shouldComponentUpdate---->lazyimg: %o', this.el);
+        // console.log('shouldComponentUpdate---->lazyimg: %o', this.el);
         // debugger;
         if (this.props.src !== nextProps.src) {
           // console.log('shouldComponentUpdate---init---->lazyimg');
           if (this.filterLoadedImages(nextProps)) {
-            console.log('shouldComponentUpdate---->lazyimg');
+            // console.log('shouldComponentUpdate---->lazyimg');
             return false;
           }
             this.initState(nextProps);
@@ -53,7 +53,7 @@ class LazyImg extends React.Component {
                 this.check();
             }, 300)
         }
-        console.log(this.currentImg);
+        // console.log(this.currentImg);
     }
 
     init() {
@@ -66,7 +66,7 @@ class LazyImg extends React.Component {
     }
 
     check() {
-        console.log('check---<lazyimg');
+        // console.log('check---<lazyimg');
         let el = this.el;
         const { isLoaded } = this.state;
         const { viewHeight, proxyImg, src} = this.currentImg;
