@@ -2,10 +2,15 @@
 
 是对于react组件的实现 ,code在components目录, 欢迎查看👏👏！！
 
+依赖npm包
+```javascript
+react@16.6.0
+react-dom@16.6.0
+react-router-dom@5.0.0
+```
+
 [Toast插件](#轻量级信息提示组件Toast)
-
 [Modal插件](#全局对话框组件Modal)
-
 [LazyImg插件](#图片懒加载组件LazyImg)
 
 ## install
@@ -15,7 +20,6 @@ $ npm install
 <!-- preview -->
 $ npm run dev
 ```
-
 ## 轻量级信息提示组件Toast
 
     用于在不打断用户操作的情况下提供成功、警告、错误等反馈信息。
@@ -75,7 +79,6 @@ Toast提供的函数调用后返回一个函数，调用这个函数可以立即
 }
 ```
 依赖版本仅供参考，推荐 react、 react-dom 版本 16.0 以上，react-transition-group 版本 2.0 以上。
-
 ## 全局对话框组件Modal
 
 用于提示某些重要信息、需要用户确认的操作，以及收集用户的输入内容。
@@ -133,7 +136,6 @@ prompt({
 ```
 
 依赖版本仅供参考。推荐 react、 react-dom 版本 16.0 以上，react-transition-group 版本 2.0 以上。
-
 ## 图片懒加载组件LazyImg
 
     用于图片的懒加载，避免一次加载全部图片，保证页面的流畅性
