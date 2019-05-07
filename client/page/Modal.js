@@ -1,6 +1,7 @@
 // Modal 组件示例
 import React from 'react';
 import Modal from '../../components/modal'
+import NavList from '../component/NavList'
 
 const { alert, confirm, prompt } = Modal
 class ModalExample extends React.Component {
@@ -11,6 +12,7 @@ class ModalExample extends React.Component {
     render() {
         return (
             <div>
+                <NavList></NavList>
                 <button onClick={() => { 
                     alert({ contentText: '已退出登录！' }) 
                 }}>alert</button>
