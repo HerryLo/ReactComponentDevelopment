@@ -12,7 +12,7 @@ class LazyImgExample extends React.Component {
 
     render() {
         return (
-            <div>
+            <>
                 <NavList></NavList>
                 <LazyImg 
                     src='http://thumb12.jfcdns.com/2018-08/29/bce5b866526230ae.png' />
@@ -30,7 +30,7 @@ class LazyImgExample extends React.Component {
                     src='http://thumb12.jfcdns.com/2018-08/29/bce5b866526230ae.png' />
                 <LazyImg 
                     src='http://thumb12.jfcdns.com/2018-08/29/bce5b866526230ae.png' />
-            </div>
+            </>
         )
     }
 }

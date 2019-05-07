@@ -11,7 +11,7 @@ class ModalExample extends React.Component {
 
     render() {
         return (
-            <div>
+            <>
                 <NavList></NavList>
                 <button onClick={() => { 
                     alert({ contentText: '已退出登录！' }) 
@@ -29,7 +29,7 @@ class ModalExample extends React.Component {
                         onCancel() { console.log('用户已取消操作。') }
                     })
                 }}>prompt</button>
-            </div>
+            </>
         )
     }
 }
