@@ -6,29 +6,26 @@ class ReactChildren extends React.Component {
     }
 
     render() {
-        const App = <div className="ac">
-            <div className="child1">children1</div>
-        </div>
-        console.log(App);
         return (
-            <div className="ac">
-                <div className="child1">children1</div>
-            </div>
+            <Test>
+                <p>1</p>
+                <p>2</p>
+            </Test>
         )
     }
 }
 
 function Test(props) {
-    console.log(props);
+    console.log(props)
     return (
-        <div>
+        <>
             {
                 React.Children.map(props.children, (c)=> { 
-                    console.log(c);
+                    {/* console.log(c); */}
                     return [[c, c]];
                 })
             }
-        </div>
+        </>
     )
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Router from './Router'
 
-const routers = Router();
+const routers = new Router();
 
 import '../styles/app'
 class App extends React.Component {
