@@ -3,11 +3,11 @@ import { Route, Switch } from "react-router-dom";
 import loadable from '@loadable/component';
 
 // 分包加载
-const ToastExample = loadable(() => import('./Toast'))
-const ModalExample = loadable(() => import('./Modal'))
-const LazyImgExample = loadable(() => import('./LazyImg'))
-const ReactChildren = loadable(() => import('./ReactChildren'))
-const ReactRender = loadable(() => import('./ReactRender'))
+const ToastExample = loadable(() => import('../page/Toast'))
+const ModalExample = loadable(() => import('../page/Modal'))
+const LazyImgExample = loadable(() => import('../page/LazyImg'))
+const ReactChildren = loadable(() => import('../page/ReactChildren'))
+const ReactRender = loadable(() => import('../page/ReactRender'))
 
 export default () => {
     return (
