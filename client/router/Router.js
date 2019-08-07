@@ -6,9 +6,7 @@ import loadable from '@loadable/component';
 const ToastExample = loadable(() => import('./Toast'))
 const ModalExample = loadable(() => import('./Modal'))
 const LazyImgExample = loadable(() => import('./LazyImg'))
-
 const ReactChildren = loadable(() => import('./ReactChildren'))
-
 const ReactRender = loadable(() => import('./ReactRender'))
 
 export default () => {
