@@ -3,7 +3,7 @@ import Router from './router/Router'
 
 const routers = new Router();
 
-import '../styles/app'
+import './styles/app'
 class App extends React.Component {
     constructor(props){
         super(props)

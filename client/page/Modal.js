@@ -2,6 +2,7 @@
 import React from 'react';
 import Modal from '../../components/modal'
 import NavList from '../component/NavList'
+import Router from '../router/Router';
 
 const { alert, confirm, prompt } = Modal
 class ModalExample extends React.Component {
