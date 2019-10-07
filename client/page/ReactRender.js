@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 
+const A = ()=> {
+    return 1;
+};
+
 class ReactRender extends React.Component {
     constructor(props) {
         super(props)
