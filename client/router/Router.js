@@ -8,6 +8,7 @@ const ModalExample = loadable(() => import('../page/Modal'))
 const LazyImgExample = loadable(() => import('../page/LazyImg'))
 const ReactChildren = loadable(() => import('../page/ReactChildren'))
 const ReactRender = loadable(() => import('../page/ReactRender'))
+const ReduxExample = loadable(() => import('../page/ReduxExample'))
 
 export default () => {
     return (
@@ -17,6 +18,7 @@ export default () => {
             <Route exact path="/lazyimg" component={LazyImgExample} />
             <Route exact path="/reactChildren" component={ReactChildren} />
             <Route exact path="/reactRender" component={ReactRender} />
+            <Route exact path="/reduxExample" component={ReduxExample} />
         </Switch>
     )
 }
