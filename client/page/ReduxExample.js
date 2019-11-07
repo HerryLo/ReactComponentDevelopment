@@ -1,5 +1,21 @@
 import React from 'react';
 
+var Promise = require('promise');
+
+var p = new Promise(function (resolve, reject) {
+    // resolve(12)
+    setTimeout(()=> {
+        console.log(12);
+        resolve(12)
+    },1000)
+})
+p.then((result) => {
+    console.log(1)
+})
+p.then((result) => {
+    console.log(2)
+});
+
 let $Store = window.$reduxStore;
 let $storeState = $Store.getState();
 

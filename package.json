@@ -4,6 +4,7 @@
   "description": "react组件尝试",
   "main": "index.js",
   "dependencies": {
+    "promise": "^8.0.3",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-router-dom": "^5.0.0",

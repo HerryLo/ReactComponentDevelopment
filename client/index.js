@@ -18,9 +18,21 @@ function addNumber(state = 0, action) {
     }
 }
 
+// Reducer
+function number(state = 0, action) {
+    console.log(state, action)
+    switch (action.type) {
+        case ADD:
+            return ++state;
+        default:
+            return state
+    }
+}
+
 // 合并Reducer
 let storeApp = combineReducers({
-    addNumber
+    addNumber,
+    number
 })
 
 // createStore创建store
