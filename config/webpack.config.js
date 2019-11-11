@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require("html-webpack-plugin") //生成html
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const entryFile = path.join(__dirname, '../client/index.js')
 const htmlTemplate = path.join(__dirname, '../client/index.html')
@@ -61,7 +62,8 @@ module.exports = {
             context: __dirname,
             // manifest就是我们第一步中打包出来的json文件
             manifest: require('../build/manifest.json'),
-        })
+        }),
+        new BundleAnalyzerPlugin()
     ],
     resolve: {
         extensions: [".js", ".jsx", ".less", ".scss", ".css"] //后缀名自动补全
