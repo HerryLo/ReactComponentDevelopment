@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import { createStore, combineReducers} from 'redux'
 import { BrowserRouter } from "react-router-dom";
 import App from './App'
+import 'babel-polyfill';
 
 // action
 const ADD = 'ADD';

@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require("html-webpack-plugin") //生成html
 
 const entryFile = path.join(__dirname, '../client/index.js')
@@ -25,7 +26,7 @@ module.exports = {
     module: {
         rules: [{
                 test: /\.js$/,
-                loader: "babel-loader",
+                loader: "babel-loader?cacheDirectory=true",
                 exclude: /^node_modules$/,
             },
             {
@@ -36,7 +37,7 @@ module.exports = {
                         importLoader: 1
                     }
                 }],
-                exclude: /node_modules/,
+                exclude: /^node_modules$/,
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -56,6 +57,11 @@ module.exports = {
             template: htmlTemplate, //html模板路径
             hash: true
         }),
+        new webpack.DllReferencePlugin({
+            context: __dirname,
+            // manifest就是我们第一步中打包出来的json文件
+            manifest: require('../build/manifest.json'),
+        })
     ],
     resolve: {
         extensions: [".js", ".jsx", ".less", ".scss", ".css"] //后缀名自动补全

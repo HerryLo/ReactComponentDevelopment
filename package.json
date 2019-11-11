@@ -4,6 +4,7 @@
   "description": "react组件尝试",
   "main": "index.js",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "promise": "^8.0.3",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
@@ -30,6 +31,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --config ./config/webpack.config.js",
+    "dll": "webpack --config ./config/webpack.config.dll.js --progress --colors -p --profile --display-modules",
     "build": "webpack --config ./config/webpack.config.pro.js --progress --colors -p --profile --display-modules"
   },
   "author": "herrylo <13995578046@163.com>",
