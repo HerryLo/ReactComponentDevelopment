@@ -10,7 +10,6 @@ const ADD = 'ADD';
 
 // Reducer
 function addNumber(state = 0, action) {
-    console.log(state, action)
     switch (action.type) {
         case ADD:
             return ++state;
