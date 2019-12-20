@@ -63,7 +63,9 @@ module.exports = {
             // manifest就是我们第一步中打包出来的json文件
             manifest: require('../build/manifest.json'),
         }),
-        new BundleAnalyzerPlugin()
+        new BundleAnalyzerPlugin({
+            analyzerPort: 3333
+        })
     ],
     resolve: {
         extensions: [".js", ".jsx", ".less", ".scss", ".css"] //后缀名自动补全

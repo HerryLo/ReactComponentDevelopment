@@ -4,6 +4,7 @@ import { createStore, combineReducers} from 'redux'
 import { BrowserRouter } from "react-router-dom";
 import App from './App'
 import 'babel-polyfill';
+import { Provider } from 'react-redux'
 
 // action
 const ADD = 'ADD';
@@ -36,11 +37,15 @@ let storeApp = combineReducers({
 })
 
 // createStore创建store
-window.$reduxStore = createStore(storeApp);
+let $reduxStore = createStore(storeApp);
+
+window.$reduxStore = $reduxStore
 
 render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>,
+    <Provider store="{{$reduxStore}}">
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </Provider>,
     document.getElementById('app')
 )
