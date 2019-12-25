@@ -10,7 +10,7 @@ const ReactChildren = loadable(() => import('../page/ReactChildren'))
 const ReactRender = loadable(() => import('../page/ReactRender'))
 const ReduxExample = loadable(() => import('../page/ReduxExample'))
 
-export default () => {
+export default () => {  
     return (
         <Switch>
             <Route exact path="/" component={ToastExample} />

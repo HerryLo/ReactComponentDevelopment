@@ -64,7 +64,7 @@ module.exports = {
             manifest: require('../build/manifest.json'),
         }),
         new BundleAnalyzerPlugin({
-            analyzerPort: 3333
+            analyzerPort: 4567
         })
     ],
     resolve: {

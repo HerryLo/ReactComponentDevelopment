@@ -37,12 +37,12 @@ let storeApp = combineReducers({
 })
 
 // createStore创建store
-let $reduxStore = createStore(storeApp);
+let store = createStore(storeApp);
 
-window.$reduxStore = $reduxStore
+window.$reduxStore = store
 
 render(
-    <Provider store="{{$reduxStore}}">
+    <Provider store={store}>
         <BrowserRouter>
             <App />
         </BrowserRouter>
