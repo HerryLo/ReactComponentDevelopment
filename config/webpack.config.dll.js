@@ -10,6 +10,7 @@ module.exports = {
         'babel-polyfill',
         'react',
         'react-dom',
+        'react-redux',
         'react-router-dom',
         '@loadable/component',
       ]
