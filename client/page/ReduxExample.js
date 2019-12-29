@@ -14,6 +14,7 @@ function Add(props) {
 }
 
 function ReduxExample(props) {
+    console.log(props);
     let { number } = props
 
     let addNumber = ()=> {
@@ -25,7 +26,6 @@ function ReduxExample(props) {
 
     let aa = useContext(ReactReduxContext)
     console.log(aa);
-
     return (
         <>
             <div>redux 使用：</div>
@@ -36,39 +36,14 @@ function ReduxExample(props) {
     )
 }
 
-// class ReduxExample extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             number: 0
-//         }
-//         this.addNumber = this.addNumber.bind(this)
-//     }
-
-//     addNumber() {
-//         let { dispatch } = this.props;
-//         dispatch({
-//             type: "ADD"
-//         })
-//     }
-
-//     render() {
-//         let { number } = this.props;
-//         return (
-//             <>
-//                 <div>redux 使用：</div>
-//                 <button onClick={this.addNumber} >add</button>
-//                 <div>数字：{number} </div>
-//                 <Add />
-//             </>
-//         )
-//     }
-// }
-
 const mapStateToProps = (state)=> {
     return  {
         number: state.number
     }
 }
 
-export default connect(mapStateToProps)(ReduxExample)
+let reduxExampleApp = connect(mapStateToProps)(ReduxExample)
+
+console.log(reduxExampleApp);
+
+export default reduxExampleApp

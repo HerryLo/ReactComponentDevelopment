@@ -9,9 +9,7 @@ module.exports = {
         'prop-types',
         'babel-polyfill',
         'react',
-        'redux',
         'react-dom',
-        'react-redux',
         'react-router-dom',
         '@loadable/component',
       ]
