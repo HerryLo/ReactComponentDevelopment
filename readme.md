@@ -1,7 +1,7 @@
 # react 插件开发示例
 
 ![](https://img.shields.io/badge/-react%4016.6.0-brightgreen)
-![](https://img.shields.io/badge/-react%-dom%4016.6.0-brightgreen)
+![](https://img.shields.io/badge/-react%39dom%4016.6.0-brightgreen)
 ![](https://img.shields.io/badge/-react-router-dom%405.0.0-brightgreen)
 
 是对于react组件的实现 ,code在components目录, 欢迎查看👏👏！！
