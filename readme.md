@@ -12,10 +12,13 @@ react@16.6.0
 react-dom@16.6.0
 react-router-dom@5.0.0
 ```
+## 目录
 
-[Toast插件](#轻量级信息提示组件Toast)
-[Modal插件](#全局对话框组件Modal)
-[LazyImg插件](#图片懒加载组件LazyImg)
+[Toast组件](#轻量级信息提示组件Toast)
+
+[Modal组件](#全局对话框组件Modal)
+
+[LazyImg组件](#图片懒加载组件LazyImg)
 
 ## install
 ```javascript
