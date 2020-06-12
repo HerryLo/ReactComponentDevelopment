@@ -1,15 +1,15 @@
 # react 插件开发示例
 
-![](https://img.shields.io/badge/-react%4016.6.0-brightgreen)
-![](https://img.shields.io/badge/-react--dom%4016.6.0-brightgreen)
+![](https://img.shields.io/badge/-react%4016.12.0-brightgreen)
+![](https://img.shields.io/badge/-react--dom%4016.12.0-brightgreen)
 ![](https://img.shields.io/badge/-react--router--dom%405.0.0-brightgreen)
 
 是对于react组件的实现 ,code在components目录, 欢迎查看👏👏！！
 
 依赖npm包
 ```javascript
-react@16.6.0
-react-dom@16.6.0
+react@16.12.0
+react-dom@16.12.0
 react-router-dom@5.0.0
 ```
 ## 目录
@@ -80,8 +80,8 @@ Toast提供的函数调用后返回一个函数，调用这个函数可以立即
 
 ``` json
 {
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-transition-group": "^2.5.0"
 }
 ```
@@ -136,8 +136,8 @@ prompt({
 
 ``` json
 {
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-transition-group": "^2.5.0"
 }
 ```
@@ -168,8 +168,8 @@ src='http://thumb12.jfcdns.com/2018-08/29/bce5b866526230ae.png' />
 
 ``` json
 {
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
 }
 ```
 依赖版本仅供参考，推荐 react、 react-dom 版本 16.0 以上
