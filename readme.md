@@ -173,3 +173,7 @@ src='http://thumb12.jfcdns.com/2018-08/29/bce5b866526230ae.png' />
 }
 ```
 依赖版本仅供参考，推荐 react、 react-dom 版本 16.0 以上
+
+### vx欢迎交流
+
+<img width="300" height="300" center src="https://didiheng.com/image/IMG_0574.JPG" />
